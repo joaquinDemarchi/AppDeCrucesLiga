@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Cruces - Fútbol Argentino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Cruces</h1>
+            <p class="subtitle">Torneo de Fútbol Argentino</p>
+            <div class="logo-placeholder"></div>
+        </header>
+
+        <div class="input-section">
+            <div class="zone-input" id="zone-a">
+                <h2>Zona A</h2>
+                <div class="team-inputs">
+                    <!-- Los inputs se generarán dinámicamente con JS -->
+                </div>
+            </div>
+
+            <div class="zone-input" id="zone-b">
+                <h2>Zona B</h2>
+                <div class="team-inputs">
+                    <!-- Los inputs se generarán dinámicamente con JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="calculate">Calcular Cruces</button>
+            <button id="clear">Limpiar Datos</button>
+            <button id="draw-bracket">Dibujar Llaves</button>
+        </div>
+
+        <div class="results">
+            <div id="initial-crosses" class="crosses-section">
+                <h2>Octavos de Final</h2>
+                <div class="crosses-container" id="octavos-container"></div>
+            </div>
+
+            <div id="quarter-finals" class="crosses-section">
+                <h2>Cuartos de Final</h2>
+                <div class="crosses-container" id="cuartos-container"></div>
+            </div>
+
+            <div id="semi-finals" class="crosses-section">
+                <h2>Semifinales</h2>
+                <div class="crosses-container" id="semifinales-container"></div>
+            </div>
+
+            <div id="final" class="crosses-section">
+                <h2>Final</h2>
+                <div class="crosses-container" id="final-container"></div>
+            </div>
+        </div>
+
+        <div id="bracket-visualization" class="bracket-container">
+            <h2>Visualización de Llaves</h2>
+            <div id="bracket-canvas"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

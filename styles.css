@@ -1,0 +1,309 @@
+:root {
+    --primary-color: #75AADB;
+    --secondary-color: #F6F6F6;
+    --accent-color: #48A248;
+    --dark-color: #333333;
+    --light-color: #FFFFFF;
+    --border-color: #E0E0E0;
+    --text-color: #333333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --team-colors: #75AADB, #48A248, #DB7575, #DBA275, #A275DB, #75DBA2, #DBB275, #7575DB;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-bottom: 4px solid var(--primary-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-color);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    font-weight: 300;
+}
+
+.logo-placeholder {
+    height: 60px;
+    margin-top: 15px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Logo_de_la_Liga_Profesional_de_F%C3%BAtbol_%28Argentina%29.svg/1200px-Logo_de_la_Liga_Profesional_de_F%C3%BAtbol_%28Argentina%29.svg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.zone-input {
+    flex: 1;
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.team-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.team-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-input label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.team-input input {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.team-input input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(117, 170, 219, 0.2);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #5d8fc7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#clear {
+    background-color: #DB7575;
+}
+
+#clear:hover {
+    background-color: #c26666;
+}
+
+#draw-bracket {
+    background-color: var(--accent-color);
+}
+
+#draw-bracket:hover {
+    background-color: #3d8a3d;
+}
+
+.results {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.crosses-section {
+    margin-bottom: 30px;
+}
+
+.crosses-section h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.crosses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.cross {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cross h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+}
+
+.team-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.bracket-container {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+#bracket-canvas {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.bracket {
+    display: flex;
+    min-width: 100%;
+    justify-content: space-around;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 200px;
+}
+
+.match {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    position: relative;
+}
+
+.match-team {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.match-team .team-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.connector {
+    position: absolute;
+    right: -20px;
+    width: 20px;
+    height: 2px;
+    background-color: var(--dark-color);
+    top: 50%;
+}
+
+.connector-vertical {
+    position: absolute;
+    right: -20px;
+    width: 2px;
+    height: 60px;
+    background-color: var(--dark-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .input-section {
+        flex-direction: column;
+    }
+    
+    .crosses-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .bracket {
+        flex-direction: column;
+    }
+    
+    .round {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+    
+    .match {
+        min-width: 180px;
+        margin: 0 10px;
+    }
+    
+    .connector, .connector-vertical {
+        display: none;
+    }
+}
